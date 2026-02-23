@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, Minus, Plus } from "lucide-react";
 import { motion } from "framer-motion";
 import { useCart } from "@/context/CartContext";
 import { Product, weightOptions, getPriceForWeight } from "@/data/products";
 import { toast } from "sonner";
 
 const ProductCard = ({ product }: { product: Product }) => {
-  const { addToCart } = useCart();
+  const { addToCart, items, updateQuantity, removeFromCart } = useCart();
   const [selectedWeight, setSelectedWeight] = useState(product.hasWeightOptions ? "1kg" : product.fixedWeight || "");
 
   const getPrice = () => {
@@ -14,6 +14,11 @@ const ProductCard = ({ product }: { product: Product }) => {
     const opt = weightOptions.find((w) => w.label === selectedWeight);
     return opt && product.price1kg ? getPriceForWeight(product.price1kg, opt.grams) : product.price1kg || 0;
   };
+
+  const cartItem = items.find(
+    (item) => item.productId === product.id && item.weight === selectedWeight
+  );
+  const cartQty = cartItem?.quantity || 0;
 
   const handleAddToCart = () => {
     addToCart({
@@ -70,6 +75,32 @@ const ProductCard = ({ product }: { product: Product }) => {
             Add
           </button>
         </div>
+
+        {/* Quantity controls */}
+        {cartQty > 0 && (
+          <div className="flex items-center justify-center gap-3 mt-3 bg-muted rounded-lg py-2">
+            <button
+              onClick={() => {
+                if (cartQty <= 1) {
+                  removeFromCart(product.id, selectedWeight);
+                } else {
+                  updateQuantity(product.id, selectedWeight, cartQty - 1);
+                }
+              }}
+              className="p-1.5 rounded-lg bg-background hover:bg-border transition-colors"
+            >
+              <Minus size={16} />
+            </button>
+            <span className="font-bold text-foreground w-8 text-center">{cartQty}</span>
+            <button
+              onClick={() => updateQuantity(product.id, selectedWeight, cartQty + 1)}
+              className="p-1.5 rounded-lg bg-background hover:bg-border transition-colors"
+            >
+              <Plus size={16} />
+            </button>
+          </div>
+        )}
+
         {!product.hasWeightOptions && product.fixedWeight && (
           <p className="text-xs text-muted-foreground mt-1">{product.fixedWeight}</p>
         )}

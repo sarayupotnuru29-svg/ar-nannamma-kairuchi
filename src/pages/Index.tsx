@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { categories } from "@/data/products";
 import CategoryCard from "@/components/CategoryCard";
 import heroImage from "@/assets/hero-kitchen.jpg";
+import bgPattern from "@/assets/bg-pattern.jpg";
 
 const Index = () => {
   return (
@@ -41,20 +42,25 @@ const Index = () => {
       </section>
 
       {/* Categories Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <h2 className="text-4xl font-display font-bold text-foreground mb-3">Our Categories</h2>
-          <p className="text-muted-foreground text-lg">Handmade with love, straight from Amma's kitchen</p>
-        </motion.div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories.map((cat) => (
-            <CategoryCard key={cat.id} name={cat.name} description={cat.description} image={cat.image} categoryId={cat.id} />
-          ))}
+      <section
+        className="py-16"
+        style={{ backgroundImage: `url(${bgPattern})`, backgroundSize: "400px", backgroundRepeat: "repeat" }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-display font-bold text-foreground mb-3">Our Categories</h2>
+            <p className="text-muted-foreground text-lg">Handmade with love, straight from Amma's kitchen</p>
+          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {categories.map((cat) => (
+              <CategoryCard key={cat.id} name={cat.name} description={cat.description} image={cat.image} categoryId={cat.id} />
+            ))}
+          </div>
         </div>
       </section>
 

@@ -26,6 +26,7 @@ const Navbar = () => {
             <img src={logo} alt="AR Logo" className="h-10 w-10 rounded-full object-cover" />
             <div className="text-primary-foreground">
               <span className="font-display text-lg font-bold leading-tight block">AR – Nannamma Kairuchi</span>
+              <span className="text-xs text-primary-foreground/70 leading-none">From Amma's Kitchen – Healthy & Tasty</span>
             </div>
           </Link>
 

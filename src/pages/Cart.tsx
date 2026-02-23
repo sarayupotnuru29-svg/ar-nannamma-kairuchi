@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { ShoppingBag } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import CartItemComponent from "@/components/CartItemComponent";
+import bgPattern from "@/assets/bg-pattern.jpg";
 
 const Cart = () => {
   const { items, totalPrice, totalItems } = useCart();
@@ -40,26 +41,31 @@ const Cart = () => {
         </div>
       </section>
 
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="space-y-4 mb-8">
-          {items.map((item) => (
-            <CartItemComponent key={`${item.productId}-${item.weight}`} item={item} />
-          ))}
-        </div>
-
-        <div className="bg-card rounded-2xl p-6 shadow-lg">
-          <div className="flex items-center justify-between mb-6">
-            <span className="text-xl font-display font-bold text-foreground">Grand Total</span>
-            <span className="text-3xl font-display font-bold text-terracotta">₹{totalPrice}</span>
+      <section
+        className="py-12"
+        style={{ backgroundImage: `url(${bgPattern})`, backgroundSize: "400px", backgroundRepeat: "repeat" }}
+      >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="space-y-4 mb-8">
+            {items.map((item) => (
+              <CartItemComponent key={`${item.productId}-${item.weight}`} item={item} />
+            ))}
           </div>
-          <a
-            href={`https://wa.me/918660124965?text=${generateWhatsAppMessage()}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block w-full bg-primary text-primary-foreground py-4 rounded-xl font-bold text-lg text-center hover:opacity-90 transition-opacity"
-          >
-            Order via WhatsApp
-          </a>
+
+          <div className="bg-card rounded-2xl p-6 shadow-lg">
+            <div className="flex items-center justify-between mb-6">
+              <span className="text-xl font-display font-bold text-foreground">Grand Total</span>
+              <span className="text-3xl font-display font-bold text-terracotta">₹{totalPrice}</span>
+            </div>
+            <a
+              href={`https://wa.me/918660124965?text=${generateWhatsAppMessage()}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full bg-primary text-primary-foreground py-4 rounded-xl font-bold text-lg text-center hover:opacity-90 transition-opacity"
+            >
+              Order via WhatsApp
+            </a>
+          </div>
         </div>
       </section>
 
