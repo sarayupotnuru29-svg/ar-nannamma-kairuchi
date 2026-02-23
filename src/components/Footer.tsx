@@ -45,12 +45,15 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-lg font-semibold mb-4 text-accent">Categories</h4>
             <div className="space-y-2 text-sm text-primary-foreground/70">
-              <p>Protein Powders</p>
-              <p>Healthy Laddus</p>
-              <p>Chatni Powders</p>
-              <p>Spicy Masalas</p>
-              <p>Healthy Malts</p>
-              <p>Multigrain Flours</p>
+              {["Protein Powders", "Healthy Laddus", "Chatni Powders", "Spicy Masalas", "Healthy Malts", "Multigrain Flours"].map((cat) => (
+                <button
+                  key={cat}
+                  onClick={scrollToTop}
+                  className="block text-primary-foreground/70 hover:text-accent transition-colors text-sm text-left"
+                >
+                  {cat}
+                </button>
+              ))}
             </div>
           </div>
 
@@ -70,7 +73,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between">
-          <p className="text-sm text-primary-foreground/50">© 2025 AR – Nannamma Kairuchi. All rights reserved.</p>
+          <p className="text-sm text-primary-foreground/50 text-center w-full">© 2025 AR – Nannamma Kairuchi. All rights reserved.</p>
           <button onClick={scrollToTop} className="mt-4 sm:mt-0 bg-accent text-accent-foreground p-2 rounded-full hover:opacity-90 transition-opacity">
             <ArrowUp size={20} />
           </button>

@@ -3,6 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { products, categories } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
+import bgPattern from "@/assets/bg-pattern.jpg";
 
 const MenuPage = () => {
   const [searchParams] = useSearchParams();
@@ -26,44 +27,49 @@ const MenuPage = () => {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Filters */}
-        <div className="flex flex-wrap gap-3 mb-10 justify-center">
-          <button
-            onClick={() => setActiveCategory("all")}
-            className={`px-5 py-2 rounded-full font-medium text-sm transition-all ${
-              activeCategory === "all"
-                ? "bg-primary text-primary-foreground"
-                : "bg-card text-foreground hover:bg-muted"
-            }`}
-          >
-            All
-          </button>
-          {categories.map((cat) => (
+      <section
+        className="py-12"
+        style={{ backgroundImage: `url(${bgPattern})`, backgroundSize: "400px", backgroundRepeat: "repeat" }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Filters */}
+          <div className="flex flex-wrap gap-3 mb-10 justify-center">
             <button
-              key={cat.id}
-              onClick={() => setActiveCategory(cat.id)}
+              onClick={() => setActiveCategory("all")}
               className={`px-5 py-2 rounded-full font-medium text-sm transition-all ${
-                activeCategory === cat.id
+                activeCategory === "all"
                   ? "bg-primary text-primary-foreground"
                   : "bg-card text-foreground hover:bg-muted"
               }`}
             >
-              {cat.name}
+              All
             </button>
-          ))}
-        </div>
+            {categories.map((cat) => (
+              <button
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
+                className={`px-5 py-2 rounded-full font-medium text-sm transition-all ${
+                  activeCategory === cat.id
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-card text-foreground hover:bg-muted"
+                }`}
+              >
+                {cat.name}
+              </button>
+            ))}
+          </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {filtered.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
+          {/* Products Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filtered.map((product) => (
+              <ProductCard key={product.id} product={product} />
+            ))}
+          </div>
 
-        {filtered.length === 0 && (
-          <p className="text-center text-muted-foreground py-12">No products found in this category.</p>
-        )}
+          {filtered.length === 0 && (
+            <p className="text-center text-muted-foreground py-12">No products found in this category.</p>
+          )}
+        </div>
       </section>
     </div>
   );
