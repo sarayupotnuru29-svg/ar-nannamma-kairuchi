@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import aboutImage from "@/assets/about-kitchen.jpg";
+import aboutImage from "@/assets/aboutpic.jpg";
 import bgPattern from "@/assets/bg-pattern.jpg";
 
 const About = () => {
