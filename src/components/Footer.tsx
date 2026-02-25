@@ -144,7 +144,7 @@ const Footer = () => {
               </div>
               <ul className="text-xs text-primary-foreground/60 space-y-1">
                 <li>• <span className="text-primary-foreground/90 font-medium">Spices/Flours:</span> Next Day</li>
-                <li>• <span className="text-primary-foreground/90 font-medium">Laddus/Cookies:</span> 48 Hours</li>
+                <li>• <span className="text-primary-foreground/90 font-medium">Laddus/Chutney powders:</span> 48 Hours</li>
                 <li>• <span className="text-primary-foreground/90 font-medium">Delivery:</span> ~7 Days</li>
               </ul>
             </div>
