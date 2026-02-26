@@ -492,7 +492,7 @@ export const products: Product[] = [
   },
   // 5. SPICES AND MASALAS
   { 
-    id: "sm1", name: "Sambar Premium (17 Ingredients)", category: "masala", price1kg: 750, fixedPrice: null, fixedWeight: null, minQty: "Grandmother's Recipe", image: sambarmasala, hasWeightOptions: true,
+    id: "sm1", name: "Sambar Powder Premium (17 Ingredients)", category: "masala", price1kg: 750, fixedPrice: null, fixedWeight: null, minQty: "Grandmother's Recipe", image: sambarmasala, hasWeightOptions: true,
     description: "Our signature blend using a secret 100-year-old grandmother's recipe.",
     ingredients: ["Coriander", "Cumin", "Fenugreek", "Curry Leaves", "13 Secret Spices"],
     benefits: ["Authentic home taste", "Chemical-free", "Aromatic"]
