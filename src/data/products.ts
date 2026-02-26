@@ -145,18 +145,6 @@ export const products: Product[] = [
   },
 // 2. DRYFRUITS & SEEDS (Category: biscuits)
   { 
-    id: "bc7", name: "Peanut butter dates", category: "biscuits", fixedPrice: 350, fixedWeight: "50 Pieces", price1kg: null, minQty: "Min quantity 50 pieces", image: peanutbutterdates, hasWeightOptions: false,
-    description: "Healthy dates filled with premium peanut butter.",
-    ingredients: ["Lion Dates", "Homemade Peanut Butter", "Honey"],
-    benefits: ["Iron rich", "Healthy fats", "Perfect post-workout snack"]
-  },
-  { 
-    id: "bc9", name: "Energy dates bites", category: "biscuits", price1kg: 1200, fixedPrice: null, fixedWeight: null, minQty: null, image: energydates, hasWeightOptions: true,
-    description: "A powerhouse of energy made with premium dates and seeds.",
-    ingredients: ["Dates", "Mixed Seeds", "Nuts"],
-    benefits: ["Instant energy boost", "High fiber", "Iron rich"]
-  },
-  { 
     id: "ds1", name: "Anjeer (Premium)", category: "biscuits", price1kg: 1100, fixedPrice: null, fixedWeight: null, minQty: null, image: anjeer, hasWeightOptions: true,
     description: "Sun-dried premium figs, naturally sweet and chewy.",
     ingredients: ["Dried Figs"],
@@ -305,77 +293,43 @@ export const products: Product[] = [
     ingredients: ["Black Eyed Pea Flour", "Urad Dal", "Spices", "Salt"],
     benefits: ["Rich in fiber", "Plant-based protein", "Handmade"]
   },
-// // 4. HEALTHY LADDUS
-//   { 
-//     id: "ld1", name: "Ragi with Ghee Laddu", category: "laddus", fixedPrice: 300, fixedWeight: "25 Pieces", price1kg: null, minQty: "Min order 25 pieces", image: ragiladdu, hasWeightOptions: false,
-//     description: "Soft, traditional laddus made from nutrient-rich sprouted ragi and pure cow ghee.",
-//     ingredients: ["Sprouted Ragi Flour", "Pure Cow Ghee", "Organic Jaggery", "Cardamom"],
-//     benefits: ["Bone strength", "High Calcium", "Safe for toddlers"]
-//   },
-//   { 
-//     id: "ld2", name: "Dates Protein Laddu", category: "laddus", fixedPrice: 375, fixedWeight: "15 Pieces", price1kg: null, minQty: "Min order 15 pieces", image: proteinladdu, hasWeightOptions: false,
-//     description: "Naturally sweet laddus packed with iron-rich dates and crushed protein-rich nuts.",
-//     ingredients: ["Lion Dates", "Almonds", "Walnuts", "Pumpkin Seeds"],
-//     benefits: ["Instant energy", "Iron booster", "Sugar-free snack"]
-//   },
-//   { 
-//     id: "ld3", name: "Makkana Laddu", category: "laddus", fixedPrice: 300, fixedWeight: "15 Pieces", price1kg: null, minQty: "Min order 15 pieces", image: makanaladdu, hasWeightOptions: false,
-//     description: "Crunchy and light laddus made from roasted fox nuts, perfect for mid-day cravings.",
-//     ingredients: ["Roasted Makhana", "Jaggery", "Ghee", "Dry Ginger"],
-//     benefits: ["Low calorie", "Anti-aging properties", "Rich in antioxidants"]
-//   },
-//   { 
-//     id: "ld4", name: "Sesame Laddu", category: "laddus", fixedPrice: 300, fixedWeight: "20 Pieces", price1kg: null, minQty: "Min order 20 pieces", image: sesamaseed, hasWeightOptions: false,
-//     description: "Classic Ellu Unde made with black/white sesame seeds, providing essential minerals.",
-//     ingredients: ["Roasted Sesame Seeds", "Jaggery Syrup", "Groundnuts"],
-//     benefits: ["Heart health", "Healthy hair", "Rich in Vitamin E"]
-//   },
-//   // Added Black Sesame Laddu
-//   { 
-//     id: "ld10", name: "Black Sesame Laddu", category: "laddus", fixedPrice: 600, fixedWeight: "30 Pieces", price1kg: null, minQty: "Min order 30 pieces", image: blacksesameladdu, hasWeightOptions: false,
-//     description: "Nutritious and traditional black sesame balls (Ellu Unde) rich in healthy minerals.",
-//     ingredients: ["Black Sesame Seeds", "Organic Jaggery", "Cardamom"],
-//     benefits: ["Rich in Iron and Calcium", "Anti-aging properties", "Boosts bone health"]
-//   },
-//   { 
-//     id: "ld5", name: "Coconut Laddu", category: "laddus", fixedPrice: 300, fixedWeight: "20 Pieces", price1kg: null, minQty: "Min order 20 pieces", image: coconutladdu, hasWeightOptions: false,
-//     description: "Freshly grated coconut slow-cooked with jaggery for a melt-in-mouth experience.",
-//     ingredients: ["Fresh Coconut", "Organic Jaggery", "Cardamom", "Pure Ghee"],
-//     benefits: ["Good fats", "Electrolyte balance", "Improves skin texture"]
-//   },
-//   { 
-//     id: "ld6", name: "Dry Fruits Laddu", category: "laddus", fixedPrice: 500, fixedWeight: "20 Pieces", price1kg: null, minQty: "Min order 20 pieces", image: dryfruitladdu, hasWeightOptions: false,
-//     description: "A premium assortment of dry fruits bound together with natural sweetness.",
-//     ingredients: ["Cashews", "Almonds", "Pistachios", "Raisins", "Anjeer"],
-//     benefits: ["Immunity booster", "Rich in vitamins", "Perfect for giftings"]
-//   },
-//   { 
-//     id: "ld7", name: "Seeds Banana Bites", category: "laddus", fixedPrice: 300, fixedWeight: "30 Pieces", price1kg: null, minQty: "Min order 30 pieces", image: seedsbananabites, hasWeightOptions: false,
-//     description: "Unique healthy bites combining natural banana fiber with high-protein seeds.",
-//     ingredients: ["Sun-dried Banana", "Sunflower Seeds", "Melon Seeds", "Chia"],
-//     benefits: ["Potassium rich", "Great for digestion", "Nutritious snack for kids"]
-//   },
-//   { 
-//     id: "ld8", name: "Healthy Nuts & Seeds Banana Slices", category: "laddus", fixedPrice: 300, fixedWeight: "20 Pieces", price1kg: null, minQty: "Min order 20 pieces", image: healthyseeds, hasWeightOptions: false,
-//     description: "Dehydrated banana slices coated with a crunchy layer of assorted nuts and seeds.",
-//     ingredients: ["Raw Banana Slices", "Crushed Almonds", "Flax Seeds", "Honey"],
-//     benefits: ["Fiber-packed", "Energy on the go", "No refined sugar"]
-//   },
-//   { 
-//     id: "ld9", name: "Mini Choco Bites", category: "laddus", fixedPrice: 200, fixedWeight: "250g", price1kg: null, minQty: "Min order 250g", image: minichocos, hasWeightOptions: false,
-//     description: "Healthy chocolate alternatives made with cocoa and jaggery instead of white sugar.",
-//     ingredients: ["Natural Cocoa Powder", "Jaggery", "Nuts", "Ghee"],
-//     benefits: ["Mood booster", "Kid-friendly healthy chocolate", "Antioxidant rich"]
-//   },
-// 4. HEALTHY LADDUS & TRADITIONAL SNACKS
+
+  // { 
+  //   id: "ld11", name: "Special Drynuts Kajjikayi", category: "laddus", fixedPrice: 750, fixedWeight: "30 Pieces", price1kg: null, minQty: "Min order 30 pieces", image: specialdrynutskajjikayi, hasWeightOptions: false,
+  //   description: "Crispy traditional shells stuffed with a premium, rich blend of roasted dry fruits and nuts.",
+  //   ingredients: ["Roasted Almonds", "Cashews", "Pistachios", "Dry Coconut", "Jaggery", "Wheat Flour"],
+  //   benefits: ["Rich in healthy fats", "Energy dense", "Traditional festive treat"]
+  // },
+  // { 
+  //   id: "ld12", name: "Regular Kajjikayi", category: "laddus", fixedPrice: 450, fixedWeight: "30 Pieces", price1kg: null, minQty: "Min order 30 pieces", image: regularkajjikayi, hasWeightOptions: false,
+  //   description: "Classic homemade Kajjikayi with a sweet, crunchy stuffing of roasted gram and coconut.",
+  //   ingredients: ["Roasted Gram (Putani)", "Dry Coconut", "Organic Jaggery", "Wheat Flour"],
+  //   benefits: ["Authentic home taste", "Perfect tea-time snack", "No preservatives"]
+  // },
   { 
-    id: "ld11", name: "Special Drynuts Kajjikayi", category: "laddus", fixedPrice: 750, fixedWeight: "30 Pieces", price1kg: null, minQty: "Min order 30 pieces", image: specialdrynutskajjikayi, hasWeightOptions: false,
+    id: "ld11", 
+    name: "Special Drynuts Kajjikayi", 
+    category: "laddus", 
+    price1kg: 1400,            // Updated to 1400
+    fixedPrice: null,          // Removed fixed price
+    fixedWeight: null,         // Removed fixed weight
+    minQty: null, 
+    image: specialdrynutskajjikayi, 
+    hasWeightOptions: true,    // Changed to true for 1kg pricing
     description: "Crispy traditional shells stuffed with a premium, rich blend of roasted dry fruits and nuts.",
     ingredients: ["Roasted Almonds", "Cashews", "Pistachios", "Dry Coconut", "Jaggery", "Wheat Flour"],
     benefits: ["Rich in healthy fats", "Energy dense", "Traditional festive treat"]
   },
   { 
-    id: "ld12", name: "Regular Kajjikayi", category: "laddus", fixedPrice: 450, fixedWeight: "30 Pieces", price1kg: null, minQty: "Min order 30 pieces", image: regularkajjikayi, hasWeightOptions: false,
+    id: "ld12", 
+    name: "Regular Kajjikayi", 
+    category: "laddus", 
+    price1kg: 950,             // Updated to 950
+    fixedPrice: null,          // Removed fixed price
+    fixedWeight: null,         // Removed fixed weight
+    minQty: null, 
+    image: regularkajjikayi, 
+    hasWeightOptions: true,    // Changed to true for 1kg pricing
     description: "Classic homemade Kajjikayi with a sweet, crunchy stuffing of roasted gram and coconut.",
     ingredients: ["Roasted Gram (Putani)", "Dry Coconut", "Organic Jaggery", "Wheat Flour"],
     benefits: ["Authentic home taste", "Perfect tea-time snack", "No preservatives"]
@@ -632,6 +586,34 @@ export const products: Product[] = [
     description: "A powerful protein-packed chocolate bar designed for fitness enthusiasts.",
     ingredients: ["Whey/Plant Protein", "Seeds", "Nuts", "Dark Cocoa"],
     benefits: ["Muscle recovery", "Satisfies cravings", "Nutritious treat"]
+  },
+  { 
+    id: "bc7", 
+    name: "Peanut butter dates", 
+    category: "biscuits_chocolates", // <--- CHANGED THIS
+    fixedPrice: 350, 
+    fixedWeight: "50 Pieces", 
+    price1kg: null, 
+    minQty: "Min quantity 50 pieces", 
+    image: peanutbutterdates, 
+    hasWeightOptions: false,
+    description: "Healthy dates filled with premium peanut butter.",
+    ingredients: ["Lion Dates", "Homemade Peanut Butter", "Honey"],
+    benefits: ["Iron rich", "Healthy fats", "Perfect post-workout snack"]
+  },
+  { 
+    id: "bc9", 
+    name: "Energy dates bites", 
+    category: "biscuits_chocolates", // <--- CHANGED THIS
+    price1kg: 1200, 
+    fixedPrice: null, 
+    fixedWeight: null, 
+    minQty: null, 
+    image: energydates, 
+    hasWeightOptions: true,
+    description: "A powerhouse of energy made with premium dates and seeds.",
+    ingredients: ["Dates", "Mixed Seeds", "Nuts"],
+    benefits: ["Instant energy boost", "High fiber", "Iron rich"]
   },
 ];
 
