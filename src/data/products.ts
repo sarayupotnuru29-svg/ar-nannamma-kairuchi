@@ -126,7 +126,7 @@ export const products: Product[] = [
     benefits: ["Brain health booster", "Improves skin/hair", "High dietary fiber"]
   },
   { 
-    id: "pp4", name: "ABC Milk Powder", category: "protein", price1kg: 900, fixedPrice: null, fixedWeight: null, minQty: null, image: abcmilkpowder, hasWeightOptions: true,
+    id: "pp4", name: "ABC Milk Powder", category: "protein", price1kg: 1200, fixedPrice: null, fixedWeight: null, minQty: null, image: abcmilkpowder, hasWeightOptions: true,
     description: "The miracle trio: Apple, Beetroot, and Carrot processed naturally into a tasty milk mix.",
     ingredients: ["Dried Apple", "Beetroot", "Carrot", "Stevia/Jaggery Powder"],
     benefits: ["Increases Hemoglobin", "Natural skin glow", "Immunity booster"]
@@ -137,12 +137,12 @@ export const products: Product[] = [
     ingredients: ["Cumin", "Ginger", "Cinnamon", "Lemon Peel Extract", "Fennel"],
     benefits: ["Boosts metabolism", "Reduces bloating", "Aids digestion"]
   },
-  { 
-    id: "pp6", name: "51 Ingredients Masala Tea Powder", category: "protein", price1kg: 1200, fixedPrice: null, fixedWeight: null, minQty: "All in one solution", image: masalatea, hasWeightOptions: true,
-    description: "A powerful Ayurvedic blend of 51 herbs and spices for the ultimate healthy tea experience.",
-    ingredients: ["Dry Ginger", "Pepper", "Tulsi", "Ashwagandha", "Clove", "Cardamom", "Mulethi"],
-    benefits: ["Treats cold/cough", "Stress relief", "Total body wellness"]
-  },
+  // { 
+  //   id: "pp6", name: "51 Ingredients Masala Tea Powder", category: "protein", price1kg: 1200, fixedPrice: null, fixedWeight: null, minQty: "All in one solution", image: masalatea, hasWeightOptions: true,
+  //   description: "A powerful Ayurvedic blend of 51 herbs and spices for the ultimate healthy tea experience.",
+  //   ingredients: ["Dry Ginger", "Pepper", "Tulsi", "Ashwagandha", "Clove", "Cardamom", "Mulethi"],
+  //   benefits: ["Treats cold/cough", "Stress relief", "Total body wellness"]
+  // },
 // 2. DRYFRUITS & SEEDS (Category: biscuits)
   { 
     id: "ds1", name: "Anjeer (Premium)", category: "biscuits", price1kg: 1100, fixedPrice: null, fixedWeight: null, minQty: null, image: anjeer, hasWeightOptions: true,
@@ -353,7 +353,7 @@ export const products: Product[] = [
     benefits: ["Low calorie", "Anti-aging properties", "Rich in antioxidants"]
   },
   { 
-    id: "ld4", name: "Sesame Laddu", category: "laddus", fixedPrice: 300, fixedWeight: "20 Pieces", price1kg: null, minQty: "Min order 20 pieces", image: sesamaseed, hasWeightOptions: false,
+    id: "ld4", name: "Sesame Laddu", category: "laddus", fixedPrice: 400, fixedWeight: "20 Pieces", price1kg: null, minQty: "Min order 20 pieces", image: sesamaseed, hasWeightOptions: false,
     description: "Classic Ellu Unde made with black/white sesame seeds, providing essential minerals.",
     ingredients: ["Roasted Sesame Seeds", "Jaggery Syrup", "Groundnuts"],
     benefits: ["Heart health", "Healthy hair", "Rich in Vitamin E"]
@@ -365,7 +365,7 @@ export const products: Product[] = [
     benefits: ["Rich in Iron and Calcium", "Anti-aging properties", "Boosts bone health"]
   },
   { 
-    id: "ld5", name: "Coconut Laddu", category: "laddus", fixedPrice: 300, fixedWeight: "20 Pieces", price1kg: null, minQty: "Min order 20 pieces", image: coconutladdu, hasWeightOptions: false,
+    id: "ld5", name: "Coconut Laddu", category: "laddus", fixedPrice: 400, fixedWeight: "20 Pieces", price1kg: null, minQty: "Min order 20 pieces", image: coconutladdu, hasWeightOptions: false,
     description: "Freshly grated coconut slow-cooked with jaggery for a melt-in-mouth experience.",
     ingredients: ["Fresh Coconut", "Organic Jaggery", "Cardamom", "Pure Ghee"],
     benefits: ["Good fats", "Electrolyte balance", "Improves skin texture"]
@@ -388,12 +388,12 @@ export const products: Product[] = [
     ingredients: ["Raw Banana Slices", "Crushed Almonds", "Flax Seeds", "Honey"],
     benefits: ["Fiber-packed", "Energy on the go", "No refined sugar"]
   },
-  { 
-    id: "ld9", name: "Mini Choco Bites", category: "laddus", fixedPrice: 200, fixedWeight: "250g", price1kg: null, minQty: "Min order 250g", image: minichocos, hasWeightOptions: false,
-    description: "Healthy chocolate alternatives made with cocoa and jaggery instead of white sugar.",
-    ingredients: ["Natural Cocoa Powder", "Jaggery", "Nuts", "Ghee"],
-    benefits: ["Mood booster", "Kid-friendly healthy chocolate", "Antioxidant rich"]
-  },
+  // { 
+  //   id: "ld9", name: "Mini Choco Bites", category: "laddus", fixedPrice: 200, fixedWeight: "250g", price1kg: null, minQty: "Min order 250g", image: minichocos, hasWeightOptions: false,
+  //   description: "Healthy chocolate alternatives made with cocoa and jaggery instead of white sugar.",
+  //   ingredients: ["Natural Cocoa Powder", "Jaggery", "Nuts", "Ghee"],
+  //   benefits: ["Mood booster", "Kid-friendly healthy chocolate", "Antioxidant rich"]
+  // },
 
   // 5. CHUTNEY POWDERS
   { 
@@ -544,6 +544,7 @@ export const products: Product[] = [
     benefits: ["Burns fat", "Controls cravings", "Regulates hormones"]
   },
   // 7. BISKETS & CHOCKLETS
+  
   { 
     id: "bc1", name: "Banana dips", category: "biscuits_chocolates", fixedPrice: 300, fixedWeight: "30 Pieces", price1kg: null, minQty: "Min quantity 30 pieces", image: bananadips, hasWeightOptions: false,
     description: "Crispy banana slices dipped in rich chocolate.",
@@ -614,6 +615,18 @@ export const products: Product[] = [
     description: "A powerhouse of energy made with premium dates and seeds.",
     ingredients: ["Dates", "Mixed Seeds", "Nuts"],
     benefits: ["Instant energy boost", "High fiber", "Iron rich"]
+  },
+  { 
+    id: "bc2", name: "51 Ingredients Masala Tea Powder", category: "biscuits_chocolates", price1kg: 1200, fixedPrice: null, fixedWeight: null, minQty: "All in one solution", image: masalatea, hasWeightOptions: true,
+    description: "A powerful Ayurvedic blend of 51 herbs and spices for the ultimate healthy tea experience.",
+    ingredients: ["Dry Ginger", "Pepper", "Tulsi", "Ashwagandha", "Clove", "Cardamom", "Mulethi"],
+    benefits: ["Treats cold/cough", "Stress relief", "Total body wellness"]
+  },
+   { 
+    id: "bc3", name: "Mini Choco Bites", category: "biscuits_chocolates", fixedPrice: 200, fixedWeight: "250g", price1kg: null, minQty: "Min order 250g", image: minichocos, hasWeightOptions: false,
+    description: "Healthy chocolate alternatives made with cocoa and jaggery instead of white sugar.",
+    ingredients: ["Natural Cocoa Powder", "Jaggery", "Nuts", "Ghee"],
+    benefits: ["Mood booster", "Kid-friendly healthy chocolate", "Antioxidant rich"]
   },
 ];
 
